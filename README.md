@@ -39,7 +39,12 @@ Here we are using Windows OS as our host machine.
 - Download Sysmon from Microsoft Sysinternals
 - Open the command prompt, run as administrator, and install using the below command
 
-        ** .\Sysmon64.exe -i .\sysmonconfig.xml **
+        .\Sysmon64.exe -i .\sysmonconfig.xml
+  
+#### Install Splunk Enterprise(Free Edition)
+
+- Install on the Windows VM.
+
 
 
 
