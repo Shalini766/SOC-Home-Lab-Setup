@@ -22,3 +22,26 @@ Here we are using Windows OS as our host machine.
 
 ### Step 2: Creating Virtual Machines
 
+#### Windows 10 VM:
+
+- Install Windows 10 ISO
+
+- Enable the network adapter in NAT/Host-only mode for isolation
+
+#### Kali Linux VM:
+
+- Download ISO from https://www.kali.org
+
+- Basic setup with networking enabled
+
+#### Install Sysmon on Windows 10
+
+- Download Sysmon from Microsoft Sysinternals
+- Open the command prompt, run as administrator, and install using the below command
+
+        ** .\Sysmon64.exe -i .\sysmonconfig.xml **
+
+
+
+
+
