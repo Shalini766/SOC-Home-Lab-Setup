@@ -20,12 +20,12 @@ This project is based on setting up a functional and isolated SOC home lab envir
 
 Here we are using Windows OS as our host machine.
 
-### Step 2: Creating Virtual Machines
+### Step 2: Download the ISO images and tools.
 
 #### Windows 10 VM:
 
 - Install Windows 10 ISO (https://www.microsoft.com/en-ca/software-download/windows10)
-- Click on create Windows 10 installation media and download the ISO image.
+- Click on Create Windows 10 installation media and download the ISO image.
 - Enable the network adapter in NAT/Host-only mode for isolation
 
 #### Kali Linux VM:
@@ -44,6 +44,15 @@ Here we are using Windows OS as our host machine.
 #### Install Splunk Enterprise(Free Edition)
 
 - Install on the Windows VM.
+
+### Step 3: Creating Virtual Machines
+- Open Oracle VM and click on *New*, and select the folder you want to store the file.
+- Name the machine as demo and select the ISO image downloaded.
+- For Hardware, set the base memory up to 4 GB and 1 CPU, click *Next*.
+- For Virtual Hard disk set to 50 GB, click *Finish*
+- To power on the Windows machine, click *Start* and install Windows 10.
+
+
 
 
 
