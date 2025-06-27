@@ -70,8 +70,8 @@ Here we are using Windows OS as our host machine.
 
  #### To add data to Splunk
  - Log in with your username and password.
- - Select Add Data-> Monitoring(to monitor event logs)-> Local Event Logs.
- - Select Application, Security, and System for Event logs, click *Next*.
+ - Select *Add Data-> Monitoring(to monitor event logs)-> Local Event Logs*.
+ - Select *Application, Security, and System* for Event logs, click *Next*.
  - Input Setting is the default, and click Submit.
  - 
 
