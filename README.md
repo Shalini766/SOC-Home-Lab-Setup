@@ -24,8 +24,8 @@ Here we are using Windows OS as our host machine.
 
 #### Windows 10 VM:
 
-- Install Windows 10 ISO
-
+- Install Windows 10 ISO (https://www.microsoft.com/en-ca/software-download/windows10)
+- Click on create Windows 10 installation media and download the ISO image.
 - Enable the network adapter in NAT/Host-only mode for isolation
 
 #### Kali Linux VM:
