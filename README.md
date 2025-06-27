@@ -50,7 +50,7 @@ Here we are using Windows OS as our host machine.
 #### For Kali Linux
 - After extracting the files to the desired folder, click on the  Kali Linux Vbox extension file.
 - The machine will be automatically imported into our virtual box.
-- To log in to the Kali machine, enter the default credentials "username=kali,password=kali"
+- To log in to the Kali machine, enter the default credentials *"username=kali,password=kali"*
 
 ### Step 4: Install Sysmon on Windows 10 VM
 - Once the test machine is running, open a web browser and go to https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
@@ -61,7 +61,20 @@ Here we are using Windows OS as our host machine.
 - Install using the below command
 
         .\Sysmon64.exe -i .\sysmonconfig.xml
+  
 ### Step 5: Install Splunk Enterprise on Windows 10 VM
+- Download Splunk Enterprise Free Edition from https://splunk.com
+- Click on the downloaded file and select the local system, and click Next.
+- Create your username and password and click Install.
+- Now Splunk will be installed on your local host on port 8000.
+
+ #### To add data to Splunk
+ - Log in with your username and password.
+ - Select Add Data-> Monitoring(to monitor event logs)-> Local Event Logs.
+ - Select Application, Security, and System for Event logs, click *Next*.
+ - Input Setting is the default, and click Submit.
+ - 
+
 
 
 
