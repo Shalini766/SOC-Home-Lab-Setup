@@ -72,8 +72,11 @@ Here we are using Windows OS as our host machine.
  - Log in with your username and password.
  - Select *Add Data-> Monitoring(to monitor event logs)-> Local Event Logs*.
  - Select *Application, Security, and System* for Event logs, click *Next*.
- - Input Setting is the default, and click Submit.
- - 
+ - Input Setting->*default*, and click Submit.
+
+### Step 6: Network Configuration
+Here we are analyzing malware in our virtual machine, so to reduce the risk of infecting our host and virtual machine, configuring our network to isolate the virtual machine from the host is crucial. 
+The network setting we are using here is the Internal Network, where the VM's in their own network, where an IP address for each VM is assigned statically. These VMs will not have access to the internet or your LAN.
 
 
 
