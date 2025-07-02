@@ -76,7 +76,24 @@ Here we are using Windows OS as our host machine.
 
 ### Step 6: Network Configuration
 Here we are analyzing malware in our virtual machine, so to reduce the risk of infecting our host and virtual machine, configuring our network to isolate the virtual machine from the host is crucial. 
-The network setting we are using here is the Internal Network, where the VM's in their own network, where an IP address for each VM is assigned statically. These VMs will not have access to the internet or your LAN.
+The network setting we are using here is the *Internal Network*, where the VMs are in their own network, where an IP address for each VM is assigned statically. These VMs will not have access to the internet or your LAN.
+
+- Open VirtualBox -> select Windows 10 -> Settings -> Network -> Internal Network -> Name your network *mytest* ->ok.
+- Same goes for Kali Linux.
+Now the two machines are in the same network. But we have to statically assign an IP address to both machines.
+
+##### Static IP for Windows:
+- Power up the Windows
+- Open Network and Internet Settings -> Change adapter settings -> Ethernet
+- Right click on Ethernet -> Properties -> TCP/IPv4
+- Select Use the following IP addresses
+- IP Address: 192.168.20.10 , Subnet Mask: 255.255.255.0
+- Default DNS and Gateway, click OK.
+
+To check the settings, open the command prompt-> ipconfig, and you should see your new IP address.
+
+  
+
 
 
 
