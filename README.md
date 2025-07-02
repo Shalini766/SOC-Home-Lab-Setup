@@ -82,7 +82,7 @@ The network setting we are using here is the *Internal Network*, where the VMs a
 - Same goes for Kali Linux.
 Now the two machines are in the same network. But we have to statically assign an IP address to both machines.
 
-##### Static IP for Windows:
+#### Static IP for Windows:
 - Power up the Windows
 - Open Network and Internet Settings -> Change adapter settings -> Ethernet
 - Right click on Ethernet -> Properties -> TCP/IPv4
@@ -91,6 +91,15 @@ Now the two machines are in the same network. But we have to statically assign a
 - Default DNS and Gateway, click OK.
 
 To check the settings, open the command prompt-> ipconfig, and you should see your new IP address.
+
+#### Static IP for Kali Linux:
+- Power up the Kali
+- Right-click on Ethernet -> Edit Connections -> Wired connection -> Settings
+- Select IPv4 Settings -> Method select Manual
+- Addresses -> Add -> 192.168.20.11, Netmask ->24 -> Save
+
+Open terminal run ifconfig and check the IP address.
+ 
 
   
 
