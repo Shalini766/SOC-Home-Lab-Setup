@@ -101,8 +101,8 @@ To check the settings, open the command prompt-> ipconfig, and you should see yo
 Open a terminal, run ifconfig, and check the IP address.
 
 ## Network Scanning with Nmap, Malware Analysis, and analysis of generated telemetry on Windows machine
-Here we are using Nmap in Kali to scan the open ports available on Windows, and creating and analysing our own malware to observe the telemetry it generates on Windows machine.
-Before deploying the malware, disable Windows Defender to establish reverse TCP connection.
+Here we are using Nmap in Kali to scan the open ports available on Windows, and creating and analysing our own malware to observe the telemetry it generates on a Windows machine.
+Before deploying the malware, disable Windows Defender to establish a reverse TCP connection.
 
 #### On Kali Linux Demo
 - Open terminal, enter *nmap -h*, which shows available options for nmap
@@ -141,6 +141,21 @@ For our test machine to download the malware, we have to set the HTTP server usi
 - terminal -> python3 -m http.server 9999 (use a port that is not in use)
 
 This allows the test machine to act as a Kali machine and start downloading the malware.
+
+Now we move to the Windows test machine and disable Windows Defender, and access the web browser to download and execute the malware.
+
+### On Windows Demo
+- Disable Windows Defender
+     *Windows Security-> Virus and threat protection-> Real Time Protection-> Disable*
+- Open a web browser and enter the IP of Kali with the Port
+      *192.168.20.11:9999*
+- Resume.pdf.exe is visible, download the file
+- Execute the malware
+
+To check the established connection to our Kali
+- Open command prompt-> Run as administrator
+- Enter netstat -anob
+
 
 
 
