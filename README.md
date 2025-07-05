@@ -68,6 +68,22 @@ Here we are using Windows OS as our host machine.
 - Create your username and password and click Install.
 - Now Splunk will be installed on your local host on port 8000.
 
+  ### Configuring Splunk to ingest Sysmon Logs
+  - Go to the folder where Splunk is installed and check whether the inputs.conf file is available.
+  - Configure the inputs.conf file to ingest the Sysmon logs.
+    
+           C Drive->Program Files->User->Splunk->etc->System->local->inputs.conf
+    
+  - Make sure to restart the Splunk services.
+    
+          Services->Splunkd Service->Restart
+
+### To feed the events from Sysmon to Splunk, there has to be an index
+
+- Open a web browser, enter localhost:8000
+- login into Splunk -> Settings -> Indexes -> Create a new Index -> Name the Index -> endpoint
+-  Add Splunk Add-on for Sysmon to parse the data
+
  #### To add data to Splunk
  - Log in with your username and password.
  - Select *Add Data-> Monitoring(to monitor event logs)-> Local Event Logs*.
@@ -155,6 +171,25 @@ Now we move to the Windows test machine and disable Windows Defender, and access
 To check the established connection to our Kali
 - Open command prompt-> Run as administrator
 - Enter netstat -anob
+
+To check if the malware Resume.pdf.exe is running
+- Go to Task Manager -> Details -> PID (sort)
+
+### Back to Kali
+Looking at our handler, we should have an open shell
+- meterpreter-> help (to see the commands)
+- meterpreter -> shell (to establish a shell on our test machine)
+- enter ***net user***
+- next, enter ***net localgroup*** and ***ipconfig***
+
+### To see the telemetry generated on the Windows test machine on Splunk
+
+- Go to Splunk -> Search and Reporting -> Search bar
+- Enter *index=endpoint Resume.pdf.exe eventcode=1
+- We see the events, process, Parent process, Process guid, etc
+  
+From here onwards, we can start creating detections to alert the analyst if any future activity occurs to prevent security attacks.
+
 
 
 
