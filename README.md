@@ -10,7 +10,7 @@ This project is based on setting up a functional and isolated SOC home lab envir
 
 - Sysmon (System Monitor) – Windows system monitoring tool to log key events.
 
-- Splunk Free – Log analysis and SIEM tool for ingesting and analyzing Sysmon logs.
+- Splunk Enterprise Free – Log analysis and SIEM tool for ingesting and analyzing Sysmon logs.
 
 ## Steps:
 ### Step 1: Install VirtualBox
