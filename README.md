@@ -60,7 +60,7 @@ Here we are using Windows OS as our host machine.
 - To be in the same folder, copy the folder path and paste it into PowerShell.
 - Install using the below command
 
-        .\Sysmon64.exe -i .\sysmonconfig.xml
+        .\Sysmon64.exe -i ..\sysmonconfig.xml
   
 ### Step 5: Install Splunk Enterprise on Windows 10 VM
 - Download Splunk Enterprise Free Edition from https://splunk.com
